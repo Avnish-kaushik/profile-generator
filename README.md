@@ -43,6 +43,20 @@ or on demand from the **Actions** tab ("Run workflow" button).
 4. That's it — the Action will run on push, and daily after that, and will
    keep `Avnish-kaushik/Avnish-kaushik`'s README.md in sync automatically.
 
+## Extra: the contribution snake
+
+There's a second workflow, `.github/workflows/snake.yml`, that generates the
+animated "snake eating your contribution graph" SVG and pushes it to a
+branch called `output` on your **profile repo** (`Avnish-kaushik/Avnish-kaushik`).
+The README template already references it, so once this workflow runs once,
+the snake will just appear.
+
+- It uses the same `PROFILE_TOKEN` secret — no extra setup needed.
+- It runs automatically on a schedule (every 12 hours) or you can trigger it
+  manually from Actions → "Generate Contribution Snake" → Run workflow.
+- The first run creates the `output` branch automatically — you don't need
+  to create it yourself.
+
 ## Editing your profile content
 
 Don't edit the profile repo's README by hand — edit
